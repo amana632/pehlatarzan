@@ -28,8 +28,10 @@ users_schema = UserSchema(many=True)
 class ServiceProvider(db.Model):
     __tablename__ = 'ServiceProvider'
     user_id = db.Column(db.Integer, primary_key = True, autoincrement = True)
+    email = db.Column(db.String(255))
     service_advisor_name = db.Column(db.String(255))
     service_advisor_no = db.Column(db.Integer)
+    workshop_no = db.Column(db.Integer)
     latitude = db.Column(db.String(255))
     longitude = db.Column(db.String(255))
     user_pic = db.Column(db.String)
@@ -65,9 +67,11 @@ class ServiceProvider(db.Model):
     muv_fortyabove = db.Column(db.Integer)
 
 
-    def __init__(self, service_advisor_name, service_advisor_no, latitude, longitude, user_pic, workshop_pic, gst, service_category, pickup_facility, twentyfourhour_facility, general_service, roadside_assistance, maintenence_repair, dent_repairing, car_wash, disc_general_service, disc_roadside_assistance, disc_maintenence_repair, disc_dent_repairing, disc_car_wash, bank_name, branch_name, ifsc_code, account_number, hb_twotosix, hb_sixtoten, hb_tenabove, sedan_sixtoten, sedan_tentotwentyfive, sedan_twentyfiveabove, suv_twelvetotwenty, suv_twentytoforty, suv_fortyabove, muv_fifteentoforty, muv_fortyabove ):
+    def __init__(self, email, service_advisor_name, service_advisor_no, workshop_no, latitude, longitude, user_pic, workshop_pic, gst, service_category, pickup_facility, twentyfourhour_facility, general_service, roadside_assistance, maintenence_repair, dent_repairing, car_wash, disc_general_service, disc_roadside_assistance, disc_maintenence_repair, disc_dent_repairing, disc_car_wash, bank_name, branch_name, ifsc_code, account_number, hb_twotosix, hb_sixtoten, hb_tenabove, sedan_sixtoten, sedan_tentotwentyfive, sedan_twentyfiveabove, suv_twelvetotwenty, suv_twentytoforty, suv_fortyabove, muv_fifteentoforty, muv_fortyabove ):
+        self.email = email
         self.service_advisor_name = service_advisor_name
         self.service_advisor_no = service_advisor_no
+        self.workshop_no = workshop_no
         self.latitude = latitude
         self.longitude = longitude
         self.user_pic = user_pic
@@ -105,7 +109,7 @@ class ServiceProvider(db.Model):
 class ServiceProviderSchema(ma.Schema):
     class Meta:
         # Fields to expose
-        fields = ('self', 'service_advisor_name', 'service_advisor_no', 'latitude', 'longitude', 'user_pic', 'workshop_pic', 'gst', 'service_category', 'pickup_facility', 'twentyfourhour_facility', 'general_service', 'roadside_assistance', 'maintenence_repair', 'dent_repairing', 'car_wash', 'disc_general_service', 'disc_roadside_assistance', 'disc_maintenence_repair', 'disc_dent_repairing', 'disc_car_wash', 'bank_name', 'branch_name', 'ifsc_code', 'account_number', 'hb_twotosix', 'hb_sixtoten', 'hb_tenabove', 'sedan_sixtoten', 'sedan_tentotwentyfive', 'sedan_twentyfiveabove', 'suv_twelvetotwenty', 'suv_twentytoforty', 'suv_fortyabove', 'muv_fifteentoforty', 'muv_fortyabove')
+        fields = ('self', 'email', 'service_advisor_name', 'service_advisor_no', 'workshop_no', 'latitude', 'longitude', 'user_pic', 'workshop_pic', 'gst', 'service_category', 'pickup_facility', 'twentyfourhour_facility', 'general_service', 'roadside_assistance', 'maintenence_repair', 'dent_repairing', 'car_wash', 'disc_general_service', 'disc_roadside_assistance', 'disc_maintenence_repair', 'disc_dent_repairing', 'disc_car_wash', 'bank_name', 'branch_name', 'ifsc_code', 'account_number', 'hb_twotosix', 'hb_sixtoten', 'hb_tenabove', 'sedan_sixtoten', 'sedan_tentotwentyfive', 'sedan_twentyfiveabove', 'suv_twelvetotwenty', 'suv_twentytoforty', 'suv_fortyabove', 'muv_fifteentoforty', 'muv_fortyabove')
 
 serviceprovider_schema = ServiceProviderSchema()
 serviceproviders_schema = ServiceProviderSchema(many=True)
