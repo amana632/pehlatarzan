@@ -106,6 +106,18 @@ def add_user():
     return jsonify(new_user)
 
 
+@app.route("/user", methods=["GET"])
+def get_user():
+    all_users = User.query.all()
+    result = users_schema.dump(all_users)
+    return jsonify(result.data)
+
+@app.route('/user/<email>')
+def show_user(emailid):
+    user = User.query.filter_by(email=email).first_or_404()
+    return jsonify(user.data)
+
+
 
 # @app.route("/user", methods=["POST"])
 # def add_user():
