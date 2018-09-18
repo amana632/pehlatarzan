@@ -33,7 +33,7 @@ from main import db
 
 @app.route("/register_serviceprovider", methods=["POST"])
 def register_serviceprovider():
-    email = request.form['email']
+    emailid = request.form['emailid']
     service_advisor_name = request.form['name']
     service_advisor_no = request.form['phone']
     workshop_no = request.form['workshop_no']
@@ -86,9 +86,9 @@ def get_service_provider():
     result = serviceproviders_schema.dump(all_serviceproviders)
     return jsonify(result.data)
 
-@app.route('/service_provider/<email>')
-def show_service_provider(email):
-    serviceprovider = ServiceProvider.query.filter_by(email=email).first_or_404()
+@app.route('/service_provider/<emailid>')
+def show_service_provider(emailid):
+    serviceprovider = ServiceProvider.query.filter_by(emailid=emailid).first_or_404()
     return jsonify(serviceprovider.data)
 
 @app.route("/user", methods=["POST"])
