@@ -63,7 +63,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-10 ">
-        <form class="form-horizontal" id='form1' method="POST">
+        <form action="./../table.html" class="form-horizontal" id='form1' method="POST">
           <fieldset>
 
             <!-- Form Name -->
@@ -360,6 +360,8 @@
     <input hidden type="text" name="branch_name" value="0">
     <input hidden type="text" name="ifsc_code" value="0">
     <input hidden type="text" name="account_number" value="0">
+    <input hidden type="text" name="hb_twotosix" value="0">
+
     <input hidden type="text" name="hb_sixtoten" value="0">
     <input hidden type="text" name="hb_tenabove" value="0">
     <input hidden type="text" name="sedan_sixtoten" value="0">
@@ -375,7 +377,13 @@
 
     </fieldset>
     </form>
+    <form hidden class="form-horizontal" id='form2' method="POST">
 
+      <input type="form-control" name="user_type" id="pass" value="">
+      <input type="form-control" name="user_type" value="service_provider">
+
+      <input type="form-control" name="user_type" value="service_provider">
+    </form>
 
     <center>
       <div class="form-group">
@@ -383,7 +391,7 @@
         <div class="col-md-4">
           <button class="button" onclick="getCheckedCheckboxesFor();">
             <span class="glyphicon glyphicon-thumbs-up"></span>
-            <a href="">Submit</a>
+            Submit
           </button>
           <a href="#" class="btn btn-danger" value="">
             <span class="glyphicon glyphicon-remove-sign"></span>Clear</a>
@@ -450,13 +458,13 @@
   </script>
   <script type="text/javascript">
     function getCheckedCheckboxesFor() {
-      document.forms['form1'].action = 'https://localhost:8080/register_serviceprovider';
+      document.forms['form1'].action = 'http://localhost:8080/register_serviceprovider';
       //  document.forms['form1'].target='frame_result1';
       document.forms['form1'].submit();
 
-      document.forms['form1'].action = 'https://localhost:8080/user';
-      // document.forms['form1'].target='frame_result2';
-      document.forms['form1'].submit();
+      // document.forms['form1'].action = 'http://localhost:8080/user';
+      // // document.forms['form1'].target='frame_result2';
+      // document.forms['form1'].submit();
       // return true;
 
       //   var temp = document.getElementById("EmailID").value;
@@ -487,6 +495,7 @@
       var value = document.getElementById("EmailID").value;
       var storage = window.localStorage;
       storage.setItem(key, value);
+      window.location.href = "./../table.html";
     }
   </script>
 

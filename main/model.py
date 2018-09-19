@@ -106,7 +106,7 @@ class ServiceProvider(db.Model):
 class ServiceProviderSchema(ma.Schema):
     class Meta:
         # Fields to expose
-        fields = ('self', 'emailid', 'service_advisor_name', 'service_advisor_no', 'workshop_no', 'latitude', 'longitude', 'user_pic', 'workshop_pic', 'gst', 'service_category', 'pickup_facility', 'twentyfourhour_facility', 'general_service', 'roadside_assistance', 'maintenence_repair', 'dent_repairing', 'car_wash', 'disc_general_service', 'disc_roadside_assistance', 'disc_maintenence_repair', 'disc_dent_repairing', 'disc_car_wash', 'bank_name', 'branch_name', 'ifsc_code', 'account_number', 'hb_twotosix', 'hb_sixtoten', 'hb_tenabove', 'sedan_sixtoten', 'sedan_tentotwentyfive', 'sedan_twentyfiveabove', 'suv_twelvetotwenty', 'suv_twentytoforty', 'suv_fortyabove', 'muv_fifteentoforty', 'muv_fortyabove')
+        fields = ('emailid', 'service_advisor_name', 'service_advisor_no', 'workshop_no', 'latitude', 'longitude', 'user_pic', 'workshop_pic', 'gst', 'service_category', 'pickup_facility', 'twentyfourhour_facility', 'general_service', 'roadside_assistance', 'maintenence_repair', 'dent_repairing', 'car_wash', 'disc_general_service', 'disc_roadside_assistance', 'disc_maintenence_repair', 'disc_dent_repairing', 'disc_car_wash', 'bank_name', 'branch_name', 'ifsc_code', 'account_number', 'hb_twotosix', 'hb_sixtoten', 'hb_tenabove', 'sedan_sixtoten', 'sedan_tentotwentyfive', 'sedan_twentyfiveabove', 'suv_twelvetotwenty', 'suv_twentytoforty', 'suv_fortyabove', 'muv_fifteentoforty', 'muv_fortyabove')
 
 serviceprovider_schema = ServiceProviderSchema()
 serviceproviders_schema = ServiceProviderSchema(many=True)

@@ -137,7 +137,6 @@ def register_serviceprovider():
 
     db.session.add(new_service_provider)
     db.session.commit()
-    return jsonify(new_service_provider)
 
 
 # endpoint to show all users
