@@ -1,332 +1,342 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Drop Down</title>
 
-      <meta name="robots" content="index, follow">
-      <meta name="googlebot" content="index, follow">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drop Down</title>
 
-      <script src="./js/embed/highlight.pack.js"></script>
-      <script src="./js/embed/embed.js"></script>
-      <link rel="stylesheet" media="screen" href="./css/embed/embed-light.css" />
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
 
-<script src="http://igniteui.com/js/modernizr.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
-<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
-<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet">
-<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet">
-    <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Inconsolata" />
+  <script src="./js/embed/highlight.pack.js"></script>
+  <script src="./js/embed/embed.js"></script>
+  <link rel="stylesheet" media="screen" href="./css/embed/embed-light.css" />
 
-    <style type="text/css">
-      .bg {
-    /* The image used */
-    background-image: url("image/7.jpg");
+  <script src="http://igniteui.com/js/modernizr.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+  <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+  <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+  <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet">
+  <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet">
+  <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Inconsolata" />
 
-    /* Full height */
-    height: 100%; 
+  <style type="text/css">
+    .bg {
+      /* The image used */
+      background-image: url("image/7.jpg");
 
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width:100%;
-    overflow-x: hidden;
-  overflow-y: hidden;
- }
-    </style>
+      /* Full height */
+      height: 100%;
 
-  </head>
-  <body>
-    <div style="overflow-x: hidden;
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div style="overflow-x: hidden;
     overflow-y: hidden; height:auto;margin:auto;">
     <form action="./../discount.html">
       <center>
-          <p style="font-size:17px;margin-top: 10%;">Mark All the Services Done @ Your Shop:</span></p>
-        </center>
-        <br />
-        <br />
+        <p style="font-size:17px;margin-top: 10%;">Mark All the Services Done @ Your Shop:</span>
+        </p>
+      </center>
+      <br />
+      <br />
 
-        <!-- <div class=".ui-widget-overlay"></div> -->
-        <div >
-                <center>
-                  <h4 class="combo-label" style="font-size:15px;">- General Service -</h4>
-                <br />
-                <div id="singleSelectCombo" ></div>
-              </center>
-        </div>
-        
-        <br />
-        <div >
-                <center>
-                  <h4 class="combo-label" style="font-size:15px;">- Maintenance & Repair -</h4>
-                <br />
-                <div id="multiSelectCombo"></div>
-                </center>
-        </div>
-        
-        <br />
-        <div  >
-                <center>
-                  <h4 class="combo-label" style="font-size:15px;">- Dent Repairing and Painting -</h4>
-                <br />
-                <div id="checkboxSelectCombo"></div>
-              </center>
-        </div>
-        
-        <br />
-        <div >
-            <center>
-                    <h3 class="combo-label" style="font-size:15px;">- Car Wash and Detailing -</h3>
-                <br />
-                <div id="checkboxSelectCombo1"></div>
-              </center>
-        </div>
-        
-        <br />
-        <div>
-                <center>
-                  <h4 class="combo-label">- Road Side Assistance  -</h4>
-                <br />
-                <div id="checkboxSelectCombo2"></div>
-              </center>
-        </div>
-        <br />
-        <br />
+      <!-- <div class=".ui-widget-overlay"></div> -->
+      <div>
         <center>
-            <button class="btn btn-primary" value="submit" style="width:90vw;height:5vh;border-top-left-radius:10%;"><a href="./../discount.html">Submit</a></button>
+          <h4 class="combo-label" style="font-size:15px;">- General Service -</h4>
+          <br />
+          <div id="singleSelectCombo"></div>
         </center>
-        
+      </div>
+
+      <br />
+      <div>
+        <center>
+          <h4 class="combo-label" style="font-size:15px;">- Maintenance & Repair -</h4>
+          <br />
+          <div id="multiSelectCombo"></div>
+        </center>
+      </div>
+
+      <br />
+      <div>
+        <center>
+          <h4 class="combo-label" style="font-size:15px;">- Dent Repairing and Painting -</h4>
+          <br />
+          <div id="checkboxSelectCombo"></div>
+        </center>
+      </div>
+
+      <br />
+      <div>
+        <center>
+          <h3 class="combo-label" style="font-size:15px;">- Car Wash and Detailing -</h3>
+          <br />
+          <div id="checkboxSelectCombo1"></div>
+        </center>
+      </div>
+
+      <br />
+      <div>
+        <center>
+          <h4 class="combo-label">- Road Side Assistance -</h4>
+          <br />
+          <div id="checkboxSelectCombo2"></div>
+        </center>
+      </div>
+      <br />
+      <br />
+      <center>
+        <button class="btn btn-primary" value="submit" style="width:90vw;height:5vh;border-top-left-radius:10%;">
+          <a href="./../discount.html">Submit</a>
+        </button>
+      </center>
+
     </form>
-        
-    </div>
-<script>
-$(function() {
-  var GeneralService = [{
-      Name: "Oil filter check and replacement"
-    },
-    {
-      Name: "Air filter check and replacement"
-    },
-    {
-      Name: "Brake fluid check and top up"
-    },
-    {
-      Name: "Anti-Freeze coolant check and top up"
-    },
-    {
-      Name: "Windscreen wash check and top up"
-    },
-    {
-      Name: "Power steering fluid check and top up"
-    },
-    {
-      Name: "Steering check"
-    },
-    {
-      Name: "Shock absorbers check."
-    },
-    {
-      Name: "Suspension check"
-    },
-    {
-      Name: "Light check"
-    },
-    {
-      Name: "Windscreen wipers check"
-    },
-    {
-      Name: "wheel alignment and suspension"
-    },
-    {
-      Name: "Charging systems check"
-    },
-  
-    {
-      Name: "Exhaust check"
-    },
-    {
-      Name: "Battery check"
-    },
-    {
-      Name: "Tyre tread and pressure check."
-    },
-    {
-      Name: "Interior lights and the doors and locks"
-    },
-    {
-      Name: "Handbrake"
-    },
-    {
-      Name: "Normal and regular checks like, hand break, warning lights, speedo meter, mileage counter…etc"
-    },
-    {
-      Name: "Interior and Exterior cleaning of the Car"
-    }
-  ];
 
-  var MaintenanceRepair = [{
-      Name: "Oil & Filter Change"
-    },
-    {
-      Name: "Brake Services"
-    },
-    {
-      Name: "Air Conditioning"
-    },
-    {
-      Name: "Tyre Services"
-    },
-    {
-      Name: "Lighting and Wipers"
-    },
-    {
-      Name: "Engine check and tune up"
-    },
-    {
-      Name: "Starting, Charging & Batteries"
-    },
-    {
-      Name: "Muffler & Exhaust"
-    },
-    {
-      Name: "Steering & Suspension"
-    },
-    {
-      Name: "35 Points Check"
-    },
-    {
-      Name: "Variety of Electrical & Mechanical Repairs"
-    }
-  ];
-
-var DentRepairingandPainting =  [{
-      Name: "Body Repair"
-    },
-    {
-      Name: "Surface Preparation"
-    },
-    {
-      Name: "Surface Sealer"
-    },
-    {
-      Name: "Paint Services"
-    },
-    {
-      Name: "Protection and Finish"
-    }
-  ];
-
-  var CarWashandDetailing =  [{
-      Name: "Bubble Bath"
-    },
-    {
-      Name: "Anti-rust Treatment"
-    },
-    {
-      Name: "Body Waxing"
-    },
-    {
-      Name: "Paint Protection / Restoration Treatment / Teflon Coating:"
-    },
-    {
-      Name: "Engine Coating"
-    },
-    {
-      Name: "Air-conditioning System Disinfect (Germs free Air condistioning)"
-    },
-    {
-      Name: "Engine rejuvenation (decarbonization)"
-    }
-  ];
-
-  var RoadSideAssistance =  [{
-      Name: "Flat Tyre/Tyre Puncture"
-    },
-    {
-      Name: "Towing"
-    },
-    {
-      Name: "Dead Battery"
-    },
-    {
-      Name: "Keys Lost or Locked"
-    },
-    {
-      Name: "Fueling"
-    }
-  ];
-  $(function() {
-
-    $("#singleSelectCombo").igCombo({
-      width: 300,
-      dataSource: GeneralService,
-      textKey: "Name",
-      valueKey: "Name",
-      dropDownOnFocus: true,
-      multiSelection: {
-        enabled: true,
-        showCheckboxes: true
+  </div>
+  <script>
+    $(function () {
+      var GeneralService = [{
+        Name: "Oil filter check and replacement"
       },
-      dropDownOrientation: "bottom"
-    });
-
-    $("#multiSelectCombo").igCombo({
-      width: 300,
-      dataSource: MaintenanceRepair,
-      textKey: "Name",
-      valueKey: "Name",
-      multiSelection: {
-        enabled: true,
-        showCheckboxes: true
+      {
+        Name: "Air filter check and replacement"
       },
-      dropDownOrientation: "bottom"
-    });
-
-    $("#checkboxSelectCombo").igCombo({
-      width: 300,
-      dataSource: DentRepairingandPainting,
-      textKey: "Name",
-      valueKey: "Name",
-      multiSelection: {
-        enabled: true,
-        showCheckboxes: true
+      {
+        Name: "Brake fluid check and top up"
       },
-      dropDownOrientation: "bottom"
-    });
-
-    $("#checkboxSelectCombo1").igCombo({
-      width: 300,
-      dataSource: CarWashandDetailing,
-      textKey: "Name",
-      valueKey: "Name",
-      multiSelection: {
-        enabled: true,
-        showCheckboxes: true
+      {
+        Name: "Anti-Freeze coolant check and top up"
       },
-      dropDownOrientation: "bottom"
-    });
-
-    $("#checkboxSelectCombo2").igCombo({
-      width: 300,
-      dataSource: RoadSideAssistance,
-      textKey: "Name",
-      valueKey: "Name",
-      multiSelection: {
-        enabled: true,
-        showCheckboxes: true
+      {
+        Name: "Windscreen wash check and top up"
       },
-      dropDownOrientation: "bottom"
-    });
+      {
+        Name: "Power steering fluid check and top up"
+      },
+      {
+        Name: "Steering check"
+      },
+      {
+        Name: "Shock absorbers check."
+      },
+      {
+        Name: "Suspension check"
+      },
+      {
+        Name: "Light check"
+      },
+      {
+        Name: "Windscreen wipers check"
+      },
+      {
+        Name: "wheel alignment and suspension"
+      },
+      {
+        Name: "Charging systems check"
+      },
 
-  });
-});
-</script>
-        
-  </body>
+      {
+        Name: "Exhaust check"
+      },
+      {
+        Name: "Battery check"
+      },
+      {
+        Name: "Tyre tread and pressure check."
+      },
+      {
+        Name: "Interior lights and the doors and locks"
+      },
+      {
+        Name: "Handbrake"
+      },
+      {
+        Name: "Normal and regular checks like, hand break, warning lights, speedo meter, mileage counter…etc"
+      },
+      {
+        Name: "Interior and Exterior cleaning of the Car"
+      }
+      ];
+
+      var MaintenanceRepair = [{
+        Name: "Oil & Filter Change"
+      },
+      {
+        Name: "Brake Services"
+      },
+      {
+        Name: "Air Conditioning"
+      },
+      {
+        Name: "Tyre Services"
+      },
+      {
+        Name: "Lighting and Wipers"
+      },
+      {
+        Name: "Engine check and tune up"
+      },
+      {
+        Name: "Starting, Charging & Batteries"
+      },
+      {
+        Name: "Muffler & Exhaust"
+      },
+      {
+        Name: "Steering & Suspension"
+      },
+      {
+        Name: "35 Points Check"
+      },
+      {
+        Name: "Variety of Electrical & Mechanical Repairs"
+      }
+      ];
+
+      var DentRepairingandPainting = [{
+        Name: "Body Repair"
+      },
+      {
+        Name: "Surface Preparation"
+      },
+      {
+        Name: "Surface Sealer"
+      },
+      {
+        Name: "Paint Services"
+      },
+      {
+        Name: "Protection and Finish"
+      }
+      ];
+
+      var CarWashandDetailing = [{
+        Name: "Bubble Bath"
+      },
+      {
+        Name: "Anti-rust Treatment"
+      },
+      {
+        Name: "Body Waxing"
+      },
+      {
+        Name: "Paint Protection / Restoration Treatment / Teflon Coating:"
+      },
+      {
+        Name: "Engine Coating"
+      },
+      {
+        Name: "Air-conditioning System Disinfect (Germs free Air condistioning)"
+      },
+      {
+        Name: "Engine rejuvenation (decarbonization)"
+      }
+      ];
+
+      var RoadSideAssistance = [{
+        Name: "Flat Tyre/Tyre Puncture"
+      },
+      {
+        Name: "Towing"
+      },
+      {
+        Name: "Dead Battery"
+      },
+      {
+        Name: "Keys Lost or Locked"
+      },
+      {
+        Name: "Fueling"
+      }
+      ];
+      $(function () {
+
+        $("#singleSelectCombo").igCombo({
+          width: 300,
+          dataSource: GeneralService,
+          textKey: "Name",
+          valueKey: "Name",
+          dropDownOnFocus: true,
+          multiSelection: {
+            enabled: true,
+            showCheckboxes: true
+          },
+          dropDownOrientation: "bottom"
+        });
+
+        $("#multiSelectCombo").igCombo({
+          width: 300,
+          dataSource: MaintenanceRepair,
+          textKey: "Name",
+          valueKey: "Name",
+          multiSelection: {
+            enabled: true,
+            showCheckboxes: true
+          },
+          dropDownOrientation: "bottom"
+        });
+
+        $("#checkboxSelectCombo").igCombo({
+          width: 300,
+          dataSource: DentRepairingandPainting,
+          textKey: "Name",
+          valueKey: "Name",
+          multiSelection: {
+            enabled: true,
+            showCheckboxes: true
+          },
+          dropDownOrientation: "bottom"
+        });
+
+        $("#checkboxSelectCombo1").igCombo({
+          width: 300,
+          dataSource: CarWashandDetailing,
+          textKey: "Name",
+          valueKey: "Name",
+          multiSelection: {
+            enabled: true,
+            showCheckboxes: true
+          },
+          dropDownOrientation: "bottom"
+        });
+
+        $("#checkboxSelectCombo2").igCombo({
+          width: 300,
+          dataSource: RoadSideAssistance,
+          textKey: "Name",
+          valueKey: "Name",
+          multiSelection: {
+            enabled: true,
+            showCheckboxes: true
+          },
+          dropDownOrientation: "bottom"
+        });
+
+      });
+    });
+    var t = document.getElementById("singleSelectCombo").value;
+    console.log(t);
+  </script>
+
+
+
+</body>
+
 </html>

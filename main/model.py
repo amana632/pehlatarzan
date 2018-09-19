@@ -5,20 +5,18 @@ from main import ma
 
 class User(db.Model):
     __tablename__ = 'User'
-    user_id = db.Column(db.Integer,primary_key=True)
     password = db.Column(db.String(255))
-    email = db.Column(db.String(255))
+    email = db.Column(db.String(255),primary_key=True)
     user_type = db.Column(db.String(255))
 
-    def __init__(self, user_id, password, email, user_type):
-        self.user_id = user_id
+    def __init__(self, password, email, user_type):
         self.password = password
         self.email = email
         self.user_type = user_type
 
 class UserSchema(ma.Schema):
     class Meta:
-        fields = ('user_id', 'password', 'email', 'user_type')
+        fields = ('password', 'email', 'user_type')
 
 user_schema = UserSchema()
 users_schema = UserSchema(many=True)
@@ -27,8 +25,7 @@ users_schema = UserSchema(many=True)
 
 class ServiceProvider(db.Model):
     __tablename__ = 'ServiceProvider'
-    user_id = db.Column(db.Integer, primary_key = True, autoincrement = True)
-    emailid = db.Column(db.String(255))
+    emailid = db.Column(db.String(255), primary_key = True)
     service_advisor_name = db.Column(db.String(255))
     service_advisor_no = db.Column(db.Integer)
     workshop_no = db.Column(db.Integer)
