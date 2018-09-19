@@ -4,8 +4,8 @@ body{
 
 	color:#0b0a32;
 
-	background:#DCDCDC;
-	font:600 16px/18px 'Open Sans',sans-serif;
+	background:rgb(255, 255, 255);
+	font:600 20px/20px 'Open Sans',sans-serif;
 
 }
 
@@ -44,7 +44,7 @@ h2{
 
 	/* box-shadow:0 12px 15px 0 rgba(226, 59, 59, 0.24),0 17px 50px 0 rgba(0,0,0,.19); */
 
-	background:#DCDCDC;
+	background:rgb(255, 255, 255);
 
 
 
