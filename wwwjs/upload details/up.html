@@ -191,7 +191,7 @@
               <i class="fa fa-clock-o"></i>
 
             </div>
-            <input id="Availability time" name="Confirm Password" type="password" placeholder="Confirm Password" class="form-control input-md"
+            <input id="confirm_password" name="Confirm Password" type="password" placeholder="Confirm Password" class="form-control input-md"
               required>
 
           </div>
@@ -372,7 +372,7 @@
     <input hidden type="text" name="suv_fortyabove" value="0">
     <input hidden type="text" name="muv_fifteentoforty" value="0">
     <input hidden type="text" name="muv_fortyabove" value="0">
-    <input hidden type="form-control" name="user_type" value="service_provider">
+    <input hidden id="user_type" type="form-control" name="user_type" value="service_provider">
 
     </fieldset>
     </form>
@@ -457,9 +457,10 @@
   </script>
   <script type="text/javascript">
     function getCheckedCheckboxesFor() {
-      document.forms['form1'].action = 'http://localhost:8080/register_serviceprovider';
+      document.forms['form1'].action = 'http://localhost:8080/service_provider';
       //  document.forms['form1'].target='frame_result1';
       document.forms['form1'].submit();
+
 
       // document.forms['form1'].action = 'http://localhost:8080/user';
       // // document.forms['form1'].target='frame_result2';
@@ -475,15 +476,17 @@
       //   o.addEventListener("load", reqListener);
       //  o.open("POST", `/service_provider/${temp}`);
       //   o.send(); 
-
-      //   function reqListener() {
-      //       z = JSON.parse(this.responseText);
-      //      console.log(z);
-      //   }
-      //   var o = new XMLHttpRequest();
-      //   o.addEventListener("load", reqListener);
-      //  o.open("POST", "/register_serviceprovider");
-      //   o.send();
+        var a = document.getElementById("password");
+        var b = document.getElementById("EmailID");
+        var c = document.getElementById("user_type");
+        function reqListener() {
+            z = JSON.parse(this.responseText);
+           console.log(z);
+        }
+        var o = new XMLHttpRequest();
+        o.addEventListener("load", reqListener);
+        o.open("POST", "http://localhost:8080/user");
+        o.send(a,b,c);
       // var checkboxes = document.querySelectorAll('input[name="' + checkboxName + '"]:checked'), values = [];
       // Array.prototype.forEach.call(checkboxes, function(el) {
       // values.push(el.value);
@@ -494,8 +497,12 @@
       var value = document.getElementById("EmailID").value;
       var storage = window.localStorage;
       storage.setItem(key, value);
-      window.location.href = "./../table.html";
+      var timeoutID = window.setTimeout(slowAlert, 1000);
+      // window.location.href = "./../table.html";
     }
+    function slowAlert() {
+      window.location.href = "./../table.html";
+}
   </script>
 
 </body>
