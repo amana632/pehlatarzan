@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-
+<head lang="en">
+  <meta charset="UTF-8">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -62,7 +62,7 @@
 
 <body>
 
-  <form class="form-inline" method="PUT" id="form1">
+  <form class="form-inline" name="ajax" method="POST" id="form1">
     <center>
       <div style="padding:10px">
 
@@ -166,18 +166,25 @@
           </tbody>
         </table>
       </div>
-      <button class="button" onclick="getCheckedCheckboxesFor();">
-        <a class="button" href="./multiple drop down/show.html">Submit</a>
+      <input type="hidden" name="_method" value="PUT" />
+
+      <button class="button" value="Lanceur PUT" onclick="chargeURLPut('http://localhost:8080/generalservicepricing/${email}')">
+        Submit
       </button>
     </center>
   </form>
   <script>
-    function getCheckedCheckboxesFor() {
+    function chargeURLPut(url) {
+      var mimeType = "text/plain";
+      xmlHttp.open('PUT', url, true);  // true : asynchrone false: synchrone
+      xmlHttp.setRequestHeader('Content-Type', mimeType);
+      xmlHttp.send(null);
 
       var storage = window.localStorage;
       var email = storage.getItem("emailid");
-      document.forms["form1"].action = `http://localhost:8080/generalservicepricing/${email}`;
-      document.forms["form1"].submit();
+      // document.forms["form1"].action = `http://localhost:8080/generalservicepricing/${email}`;
+      // document.forms["form1"].submit();
+      window.location.href = "./multiple drop down/show.html"
     };
   </script>
 

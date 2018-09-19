@@ -63,7 +63,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-10 ">
-        <form action="./../table.html" class="form-horizontal" id='form1' method="POST">
+        <form class="form-horizontal" id='form1' method="POST">
           <fieldset>
 
             <!-- Form Name -->
@@ -457,7 +457,7 @@
   </script>
   <script type="text/javascript">
     function getCheckedCheckboxesFor() {
-      document.forms['form1'].action = 'http://localhost:8080/service_provider';
+      document.forms['form1'].action = 'http://localhost:8080/register_serviceprovider';
       //  document.forms['form1'].target='frame_result1';
       document.forms['form1'].submit();
 
@@ -476,17 +476,17 @@
       //   o.addEventListener("load", reqListener);
       //  o.open("POST", `/service_provider/${temp}`);
       //   o.send(); 
-        var a = document.getElementById("password");
-        var b = document.getElementById("EmailID");
-        var c = document.getElementById("user_type");
-        function reqListener() {
-            z = JSON.parse(this.responseText);
-           console.log(z);
-        }
-        var o = new XMLHttpRequest();
-        o.addEventListener("load", reqListener);
-        o.open("POST", "http://localhost:8080/user");
-        o.send(a,b,c);
+      var a = document.getElementById("password");
+      var b = document.getElementById("EmailID");
+      var c = document.getElementById("user_type");
+      function reqListener() {
+        z = JSON.parse(this.responseText);
+        console.log(z);
+      }
+      var o = new XMLHttpRequest();
+      o.addEventListener("load", reqListener);
+      o.open("POST", "http://localhost:8080/user");
+      o.send(a, b, c);
       // var checkboxes = document.querySelectorAll('input[name="' + checkboxName + '"]:checked'), values = [];
       // Array.prototype.forEach.call(checkboxes, function(el) {
       // values.push(el.value);
@@ -502,7 +502,7 @@
     }
     function slowAlert() {
       window.location.href = "./../table.html";
-}
+    }
   </script>
 
 </body>
