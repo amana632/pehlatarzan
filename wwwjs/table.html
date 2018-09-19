@@ -176,7 +176,7 @@
 
       var storage = window.localStorage;
       var email = storage.getItem("emailid");
-      document.forms["form1"].action = `http://localhost:8080/serviceproviderupdate/${email}`;
+      document.forms["form1"].action = `http://localhost:8080/generalservicepricing/${email}`;
       document.forms["form1"].submit();
     };
   </script>

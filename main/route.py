@@ -149,7 +149,7 @@ def get_service_provider():
 @app.route('/service_provider/<emailid>')
 def show_service_provider(emailid):
     serviceprovider = ServiceProvider.query.filter_by(emailid=emailid).first_or_404()
-    return jsonify(serviceprovider.data)
+    return serviceprovider_schema.jsonify(serviceprovider)
 
 @app.route("/user", methods=["POST"])
 def add_user():
@@ -179,7 +179,38 @@ def show_user(emailid):
 
 
 
+@app.route("/generalservicepricing/<emailid>", methods=["PUT"])
+def generalservicepricing_update(emailid):
+    serviceprovider = ServiceProvider.query.filter_by(emailid=emailid).first_or_404()
+ 
+    hb_twotosix = request.form['hb_twotosix']
+    hb_sixtoten = request.form['hb_sixtoten']
+    hb_tenabove = request.form['hb_tenabove']
+    sedan_sixtoten = request.form['sedan_sixtoten']
+    sedan_tentotwentyfive = request.form['sedan_tentotwentyfive']
+    sedan_twentyfiveabove = request.form['sedan_twentyfiveabove']
+    suv_twelvetotwenty = request.form['suv_twelvetotwenty']
+    suv_twentytoforty = request.form['suv_twentytoforty']
+    suv_fortyabove = request.form['suv_fortyabove']
+    muv_fifteentoforty = request.form['muv_fifteentoforty']
+    muv_fortyabove = request.form['muv_fortyabove']
 
+
+    serviceprovider.hb_twotosix = hb_twotosix
+    serviceprovider.hb_sixtoten = hb_sixtoten
+    serviceprovider.hb_tenabove = hb_tenabove
+    serviceprovider.sedan_sixtoten = sedan_sixtoten
+    serviceprovider.sedan_tentotwentyfive = sedan_tentotwentyfive
+    serviceprovider.sedan_twentyfiveabove = sedan_twentyfiveabove
+    serviceprovider.suv_twelvetotwenty = suv_twelvetotwenty
+    serviceprovider.suv_twentytoforty = suv_twentytoforty
+    serviceprovider.suv_fortyabove = suv_fortyabove
+    serviceprovider.muv_fifteentoforty = muv_fifteentoforty
+    serviceprovider.muv_fortyabove = muv_fortyabove
+ 
+
+    db.session.commit()
+    return serviceprovider_schema.jsonify(serviceprovider)
 
 
 
