@@ -155,7 +155,7 @@ def show_service_provider(emailid):
 @app.route("/user", methods=["POST"])
 def add_user():
     password = request.form['password']
-    email = request.form['email']
+    email = request.form['emailid']
     user_type = request.form['user_type']
     
     
