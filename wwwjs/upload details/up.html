@@ -74,7 +74,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="Upload photo">Upload Your photo</label>
               <div class="col-md-4">
-                <input id="Upload photo" name="userpic" class="input-file" type="file">
+                <input id="userpic" name="userpic" class="input-file" type="file">
               </div>
               <div class="col-md-4">
                 <button style="text:black;">Choose file from camera</button>
@@ -84,7 +84,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="Upload photo">Upload Workshop photo</label>
               <div class="col-md-4">
-                <input id="Upload photo" name="workshoppic" class="input-file" type="file">
+                <input id="workshoppic" name="workshoppic" class="input-file" type="file">
               </div>
 
 
@@ -105,7 +105,7 @@
               <i class="fa fa-user">
               </i>
             </div>
-            <input id="Name (Full name)" name="name" type="text" placeholder="Name (Full name)" class="form-control input-md">
+            <input id="name" name="name" type="text" placeholder="Name (Full name)" class="form-control input-md">
           </div>
 
 
@@ -124,7 +124,7 @@
               <i class="fa fa-phone"></i>
 
             </div>
-            <input id="Phone number " name="phone" type="number" placeholder="Personal Phone number " class="form-control input-md">
+            <input id="phone" name="phone" type="number" placeholder="Personal Phone number " class="form-control input-md">
 
           </div>
           <div class="input-group othertop">
@@ -132,7 +132,7 @@
               <i class="fa fa-mobile fa-1x" style="font-size: 20px;"></i>
 
             </div>
-            <input id="Phone number " name="workshop_no" type="number" placeholder=" Workshop Phone number " class="form-control input-md">
+            <input id="workshop_no" name="workshop_no" type="number" placeholder=" Workshop Phone number " class="form-control input-md">
 
           </div>
 
@@ -150,7 +150,7 @@
               <i class="fa fa-envelope-o"></i>
 
             </div>
-            <input id="EmailID" name="emailid" type="email" placeholder="Email Address" class="form-control input-md" required>
+            <input id="emailid" name="emailid" type="email" placeholder="Email Address" class="form-control input-md" required>
 
           </div>
 
@@ -203,7 +203,7 @@
       <div class="form-group">
         <label class="col-md-4 control-label col-xs-12" for="Permanent Address">Permanent Address</label>
         <div class="col-md-2  col-xs-4">
-          <input id="Lang" name="long" type="text" placeholder="District" class="form-control input-md " required>
+          <input id="long" name="long" type="text" placeholder="District" class="form-control input-md " required>
           <br />
           <center>
             <button class="btn btn-secondary" onclick="maps()">Detect Your Location </button>
@@ -212,7 +212,7 @@
 
         <div class="col-md-2 col-xs-4">
 
-          <input id="Lat" name="lat" type="text" placeholder="Area" class="form-control input-md " required>
+          <input id="lat" name="lat" type="text" placeholder="Area" class="form-control input-md " required>
         </div>
 
       </div>
@@ -225,29 +225,29 @@
     <div class="col-md-4">
       <div class="checkbox">
         <label for="Languages Known-0">
-          <input type="checkbox" name="category" id="Languages Known-0" value="General Service"> General Service
+          <input type="checkbox" name="category" id="category-0" value="General Service"> General Service
         </label>
       </div>
       <div>
 
         <div class="checkbox">
           <label for="Languages Known-1">
-            <input type="checkbox" name="category" id="Languages Known-1" value="Road side Assistance"> Road side Assistance
+            <input type="checkbox" name="category" id="category-1" value="Road side Assistance"> Road side Assistance
           </label>
         </div>
         <div class="checkbox">
           <label for="Languages Known-2">
-            <input type="checkbox" name="category" id="Languages Known-2" value="Maintainence & Repair"> Maintainence & Repair
+            <input type="checkbox" name="category" id="category-2" value="Maintainence & Repair"> Maintainence & Repair
           </label>
         </div>
         <div class="checkbox">
           <label for="Languages Known-3">
-            <input type="checkbox" name="category" id="Languages Known-3" value="Dent Reparing & Painting"> Dent Reparing & Painting
+            <input type="checkbox" name="category" id="category-3" value="Dent Reparing & Painting"> Dent Reparing & Painting
           </label>
         </div>
         <div class="checkbox">
           <label for="Languages Known-4">
-            <input type="checkbox" name="category" id="Languages Known-4" value="Car Wash & Detailing"> Car Wash & Detailing
+            <input type="checkbox" name="category" id="category-4" value="Car Wash & Detailing"> Car Wash & Detailing
           </label>
         </div>
       </div>
@@ -258,10 +258,10 @@
       <label class="col-md-4 control-label" for="radios">Do you provide GST Bill</label>
       <div class="col-md-4">
         <label class="radio-inline" for="radios-0">
-          <input type="radio" name="gst" id="radios-0" value="Yes" checked="checked"> Yes
+          <input type="radio" name="gst" id="gst-0" value="Yes" checked="checked"> Yes
         </label>
         <label class="radio-inline" for="radios-1">
-          <input type="radio" name="gst" id="radios-1" value="No"> No
+          <input type="radio" name="gst" id="gst-1" value="No"> No
         </label>
       </div>
     </div>
@@ -325,10 +325,10 @@
       <label class="col-md-4 control-label" for="radios">Do you provide pickup facility</label>
       <div class="col-md-4">
         <label class="radio-inline" for="radios-0">
-          <input type="radio" name="pickup_facility" id="radios-0" value="Yes" checked="checked"> Yes
+          <input type="radio" name="pickup_facility" id="pickup_facility-0" value="Yes" checked="checked"> Yes
         </label>
         <label class="radio-inline" for="radios-1">
-          <input type="radio" name="pickup_facility" id="radios-1" value="NO"> No
+          <input type="radio" name="pickup_facility" id="pickup_facility-1" value="NO"> No
         </label>
       </div>
     </div>
@@ -338,10 +338,10 @@
       <label class="col-md-4 control-label" for="radios">Do you provide 24 hr facility</label>
       <div class="col-md-4">
         <label class="radio-inline" for="radios-0">
-          <input type="radio" name="24hr" id="radios-0" value="Yes" checked="checked"> Yes
+          <input type="radio" name="24hr" id="24hr-0" value="Yes" checked="checked"> Yes
         </label>
         <label class="radio-inline" for="radios-1">
-          <input type="radio" name="24hr" id="radios-1" value="No"> No
+          <input type="radio" name="24hr" id="24hr-1" value="No"> No
         </label>
       </div>
     </div>
@@ -435,8 +435,8 @@
       function onSuccess(position) {
         var lat = position.coords.latitude;
         var lang = position.coords.longitude;
-        document.getElementById("Lat").value = lat;
-        document.getElementById("Lang").value = lang;
+        document.getElementById("lat").value = lat;
+        document.getElementById("long").value = lang;
         console.log(lat);
         console.log(lang);
         //Google Maps
@@ -456,10 +456,25 @@
 
   </script>
   <script type="text/javascript">
+    function slowAlert() {
+      var a = document.getElementById("password").value;
+      var b = document.getElementById("EmailID").value;
+      var c = document.getElementById("user_type").value;
+      console.log(a, b, c);
+      function reqListener() {
+        z = JSON.parse(this.responseText);
+        console.log(z);
+      }
+      var o = new XMLHttpRequest();
+      o.addEventListener("load", reqListener);
+      o.open("POST", "http://13.59.34.254/user");
+      o.send(`password=${a}`, `emailid=${b}`, `user_type=${c}`);
+      return 0;
+    }
     function getCheckedCheckboxesFor() {
-      document.forms['form1'].action = 'http://localhost:8080/register_serviceprovider';
+      // document.forms['form1'].action = 'http://13.59.34.254/register_serviceprovider';
       //  document.forms['form1'].target='frame_result1';
-      document.forms['form1'].submit();
+      // document.forms['form1'].submit();
 
 
       // document.forms['form1'].action = 'http://localhost:8080/user';
@@ -476,17 +491,10 @@
       //   o.addEventListener("load", reqListener);
       //  o.open("POST", `/service_provider/${temp}`);
       //   o.send(); 
-      var a = document.getElementById("password");
-      var b = document.getElementById("EmailID");
-      var c = document.getElementById("user_type");
-      function reqListener() {
-        z = JSON.parse(this.responseText);
-        console.log(z);
-      }
-      var o = new XMLHttpRequest();
-      o.addEventListener("load", reqListener);
-      o.open("POST", "http://localhost:8080/user");
-      o.send(a, b, c);
+
+
+
+
       // var checkboxes = document.querySelectorAll('input[name="' + checkboxName + '"]:checked'), values = [];
       // Array.prototype.forEach.call(checkboxes, function(el) {
       // values.push(el.value);
@@ -494,15 +502,13 @@
       // return values;
       // values mein data h
       var key = "emailid";
-      var value = document.getElementById("EmailID").value;
+      var value = document.getElementById("emailid").value;
       var storage = window.localStorage;
       storage.setItem(key, value);
-      var timeoutID = window.setTimeout(slowAlert, 1000);
-      // window.location.href = "./../table.html";
-    }
-    function slowAlert() {
+      var timeoutID = window.setTimeout(slowAlert, 5000);
       window.location.href = "./../table.html";
     }
+
   </script>
 
 </body>

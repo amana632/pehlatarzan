@@ -62,7 +62,7 @@
 
 <body>
 
-  <form class="form-inline" name="ajax" method="POST" id="form1">
+  <form class="form-inline" id="form1">
     <center>
       <div style="padding:10px">
 
@@ -85,77 +85,77 @@
               <td>Hatch Back</td>
               <td>2L to 6L</td>
               <td>
-                <input type="password" style="height:5%" class="form-control form-control-sm" id="colFormLabelSm">
+                <input type="number" style="height:5%" class="form-control form-control-sm" id="hb_twotosix">
               </td>
             </tr>
             <tr>
               <td>Hatch Back</td>
               <td>6L to 10L</td>
               <td>
-                <input type="password" style="height:5%" class="form-control form-control-sm" id="colFormLabelSm">
+                <input type="number" style="height:5%" class="form-control form-control-sm" id="hb_sixtoten">
               </td>
             </tr>
             <tr>
               <td>Hatch Back</td>
               <td>10L & Above</td>
               <td>
-                <input type="password" style="height:5%" class="form-control form-control-sm" id="colFormLabelSm">
+                <input type="number" style="height:5%" class="form-control form-control-sm" id="hb_tenabove">
               </td>
             </tr>
             <tr>
               <td>Sedan</td>
               <td>6L to 10L</td>
               <td>
-                <input type="password" style="height:5%" class="form-control form-control-sm" id="colFormLabelSm">
+                <input type="number" style="height:5%" class="form-control form-control-sm" id="sedan_sixtoten">
               </td>
             </tr>
             <tr>
               <td>Sedan</td>
               <td>10L to 25L</td>
               <td>
-                <input type="password" style="height:5%" class="form-control form-control-sm" id="colFormLabelSm">
+                <input type="number" style="height:5%" class="form-control form-control-sm" id="sedan_tentotwentyfive">
               </td>
             </tr>
             <tr>
               <td>Sedan</td>
               <td>25L & Above</td>
               <td>
-                <input type="password" style="height:5%" class="form-control form-control-sm" id="colFormLabelSm">
+                <input type="number" style="height:5%" class="form-control form-control-sm" id="sedan_twentyfiveabove">
               </td>
             </tr>
             <tr>
               <td>SUV</td>
               <td>12L to 20L</td>
               <td>
-                <input type="password" style="height:5%" class="form-control form-control-sm" id="colFormLabelSm">
+                <input type="number" style="height:5%" class="form-control form-control-sm" id="suv_twelvetotwenty">
               </td>
             </tr>
             <tr>
               <td>SUV</td>
               <td>20L to 40L</td>
               <td>
-                <input type="password" style="height:5%" class="form-control form-control-sm" id="colFormLabelSm">
+                <input type="number" style="height:5%" class="form-control form-control-sm" id="suv_twentytoforty">
               </td>
             </tr>
             <tr>
               <td>SUV</td>
               <td>40L & Above</td>
               <td>
-                <input type="password" style="height:5%" class="form-control form-control-sm" id="colFormLabelSm">
+                <input type="number" style="height:5%" class="form-control form-control-sm" id="suv_fortyabove">
               </td>
             </tr>
             <tr>
               <td>MUV</td>
               <td>15L to 40L</td>
               <td>
-                <input type="password" style="height:5%" class="form-control form-control-sm" id="colFormLabelSm">
+                <input type="number" style="height:5%" class="form-control form-control-sm" id="muv_fifteentoforty">
               </td>
             </tr>
             <tr>
               <td>MUV</td>
               <td>40L & Above</td>
               <td>
-                <input type="password" style="height:5%" class="form-control form-control-sm" id="colFormLabelSm">
+                <input type="number" style="height:5%" class="form-control form-control-sm" id="muv_fortyabove">
               </td>
             </tr>
             <tr>
@@ -166,25 +166,43 @@
           </tbody>
         </table>
       </div>
-      <input type="hidden" name="_method" value="PUT" />
+      <!-- <input type="hidden" name="_method" value="PUT" /> -->
 
-      <button class="button" value="Lanceur PUT" onclick="chargeURLPut('http://localhost:8080/generalservicepricing/${email}')">
+      <button class="button" value="submit" onclick="chargeURLPut()">
         Submit
       </button>
     </center>
   </form>
   <script>
-    function chargeURLPut(url) {
-      var mimeType = "text/plain";
-      xmlHttp.open('PUT', url, true);  // true : asynchrone false: synchrone
-      xmlHttp.setRequestHeader('Content-Type', mimeType);
-      xmlHttp.send(null);
+    function chargeURLPut() {
+      console.log("aman");
+      var hb_twotosix = document.getElementById("hb_twotosix").value;
+      var hb_sixtoten = document.getElementById("hb_sixtoten").value;
+      var hb_tenabove = document.getElementById("hb_tenabove").value;
+      var sedan_sixtoten = document.getElementById("sedan_sixtoten").value;
+      var sedan_tentotwentyfive = document.getElementById("sedan_tentotwentyfive").value;
+      var sedan_twentyfiveabove = document.getElementById("sedan_twentyfiveabove").value;
+      var suv_twelvetotwenty = document.getElementById("suv_twelvetotwenty").value;
+      var suv_twentytoforty = document.getElementById("suv_twentytoforty").value;
+      var suv_fortyabove = document.getElementById("suv_fortyabove").value;
+      var muv_fifteentoforty = document.getElementById("muv_fifteentoforty").value;
+      var muv_fortyabove = document.getElementById("muv_fortyabove").value;
+
+      function reqListener() {
+        z = JSON.parse(this.responseText);
+        console.log(z);
+      }
 
       var storage = window.localStorage;
       var email = storage.getItem("emailid");
-      // document.forms["form1"].action = `http://localhost:8080/generalservicepricing/${email}`;
-      // document.forms["form1"].submit();
-      window.location.href = "./multiple drop down/show.html"
+
+      var o = new XMLHttpRequest();
+      o.addEventListener("load", reqListener);
+      o.open("PUT", `http://13.59.34.254/generalservicepricing/${email}`);
+      o.send(`hb_twotosix=${hb_twotosix}&hb_sixtoten=${hb_sixtoten}&hb_tenabove=${hb_tenabove}&sedan_sixtoten=${sedan_sixtoten}&sedan_tentotwentyfive=${sedan_tentotwentyfive}&sedan_twentyfiveabove=${sedan_twentyfiveabove}&suv_twentytoforty=${suv_twentytoforty}&suv_fortyabove=${suv_fortyabove}&muv_fifteentoforty=${muv_fifteentoforty}&muv_fortyabove=${muv_fortyabove}`);
+
+
+
     };
   </script>
 
